@@ -1,1 +1,72 @@
-# Connect-Four-Android-Online-Game
+* Game phases
+**  Waiting player
+url: http://webdev.cse.msu.edu/~longziya/cse476/proj2/join.php?user=longziya&magic=NechAtHa6RuzeR8x&pw=&usr=yesss
+#+BEGIN_SRC html
+<?xml version="1.0" encoding="UTF-8" ?><connect player="player2" />
+#+END_SRC
+#+BEGIN_SRC sql
+database: | player1_username = null | player2_username = null|
+player1 and player2 are pulling info from server.
+
+if (SELECT player1 FROM players) == NULL:
+   UPDATE players SET player1 = 'player1abc'
+else:
+   UPDATE players SET player2 = 'player2fff'
+#+END_SRC
+
+url: http://webdev.cse.msu.edu/~longziya/cse476/proj2/create-game.php?user=longziya&magic=NechAtHa6RuzeR8x&pw=&usr=222
+#+BEGIN_SRC html
+<?xml version="1.0" encoding="UTF-8" ?><connect status='yes' msg='start' op="yesss"/>
+#+END_SRC
+#+BEGIN_SRC sql
+if player1 != null and player2 != null
+  Game_start = 1
+server updates database:
+1. Drop "gamelive" table
+2. create "Gamelive" table
+3. insert ID of player2 to userName of Gamelive, which means player1 should play first!!!
+#+END_SRC
+
+**  Gamestart    
+url: http://webdev.cse.msu.edu/~longziya/cse476/proj2/pull.php?user=longziya&magic=NechAtHa6RuzeR8x&pw=&pull=1
+
+pulling info from server -> userName != device's username => you can place your disc
+                                                          => need to wait and update grids
+#+BEGIN_SRC html
+<?xml version="1.0" encoding="UTF-8" ?><connect status='yes' usr="player2" gridNum="43"/>
+#+END_SRC
+
+url: http://webdev.cse.msu.edu/~longziya/cse476/proj2/receiver.php?user=longziya&magic=NechAtHa6RuzeR8x&pw=&userName=yess&gridNum=1
+
+Player playaction done -> send (userName + gridNum) -> Server: update database ->
+**  Ending
+url: http://webdev.cse.msu.edu/~longziya/cse476/proj2/end.php?user=longziya&magic=NechAtHa6RuzeR8x&pw=&end=1
+
+game end according to local devices.
+
+if game ends => send info to server
+
+Drop "players" table
+
+* Other url
+http://webdev.cse.msu.edu/~longziya/cse476/proj2/create-user.php?user=longziya&magic=NechAtHa6RuzeR8x&pw= &usr=yesss &psw=666
+
+* SQL note
+#+BEGIN_SRC sql
+create table players(player1 varchar(255),player2 varchar(255))
+insert players (player1,player2) values(NULL,NULL)
+UPDATE players SET player1= NULL,player2= NULL
+DROP TABLE gamelive
+#+END_SRC
+
+#+BEGIN_SRC sql
+CREATE TABLE Gamelive (
+userName VARCHAR,
+gridNum INT
+)
+#+END_SRC
+* insert new user (SQL):
+- insert into connect(user, password) values('yesss', '666');
+  - http://webdev.cse.msu.edu/~longziya/cse476/proj2/create-user.php?user=longziya&magic=NechAtHa6RuzeR8x&pw=&usr=yesss&psw=666
+* Show all user(SQL): 
+- select * from connect;

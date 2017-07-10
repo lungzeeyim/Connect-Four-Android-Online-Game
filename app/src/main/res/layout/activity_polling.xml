@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_end"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.msu.rookscam.team9.connect4.EndActivity">
+
+
+    <TextView
+        android:id="@+id/pollingTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elegantTextHeight="false"
+        android:text="@string/waiting_for_player"
+        android:textSize="30sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp" />
+
+    <TextView
+        android:id="@+id/player1str"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/pollingTextView"
+        android:layout_below="@+id/pollingTextView"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/Player1"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/player1Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textSize="18sp"
+        android:layout_above="@+id/player2str"
+        android:layout_alignStart="@+id/player2Name" />
+
+    <TextView
+        android:id="@+id/player2str"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/player1str"
+        android:layout_below="@+id/player1str"
+        android:layout_marginTop="26dp"
+        android:text="@string/Player2"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/player2Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/player2str"
+        android:layout_alignBottom="@+id/player2str"
+        android:layout_toEndOf="@+id/button"
+        android:text="@string/waiting"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="26dp"
+        android:text="@string/gameStart" />
+
+</RelativeLayout>

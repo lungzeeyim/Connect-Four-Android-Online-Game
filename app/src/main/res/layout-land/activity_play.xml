@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_play"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="edu.msu.rookscam.team9.connect4.PlayActivity">
+
+    <Button
+        android:text="@string/done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/doneButton"
+        android:layout_centerHorizontal="false"
+        android:layout_centerVertical="false"
+        android:layout_alignParentTop="false"
+        android:focusable="false"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/currentPlayerName"
+        android:onClick="onDoneClick" />
+
+    <Button
+        android:id="@+id/undoButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/doneButton"
+        android:onClick="onUndoClick"
+        android:text="@string/undo" />
+
+    <Button
+        android:text="@string/surrender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/surrenderButton"
+        android:layout_below="@+id/undoButton"
+        android:layout_alignParentStart="false"
+        android:onClick="onSurrenderClick" />
+
+    <Button
+        android:text="@string/quit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/quitButton"
+        android:onClick="onQuitClick"
+        android:layout_below="@+id/surrenderButton" />
+
+    <TextView
+        android:text="@string/current_player"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/currentPlayerName" />
+
+    <view
+        android:id="@+id/playView"
+        class="edu.msu.rookscam.team9.connect4.PlayView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="75dp"
+        android:layout_toEndOf="@+id/surrenderButton" />
+</RelativeLayout>

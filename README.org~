@@ -1,0 +1,4 @@
+* insert new user (SQL):
+- insert into hatteruser(user, password) values('ameli', '7fdafasa');
+* Show all user(SQL): 
+- select * from connect;

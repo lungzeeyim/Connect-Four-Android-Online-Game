@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_how_to_play"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="edu.msu.rookscam.team9.connect4.HowToPlayActivity"
+    android:layout_alignParentStart="false"
+    android:gravity="center_vertical|center_horizontal">
+
+    <TextView
+        android:text="@string/howToPlayDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/howToPlayDescription"
+        android:layout_below="@+id/howToPlayTitle"
+        android:textSize="12sp" />
+
+    <Button
+        android:text="@string/home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/helpHomeButton"
+        android:layout_alignStart="@+id/howToPlayTitle"
+        android:layout_alignEnd="@+id/howToPlayTitle"
+        android:onClick="onHomeClick"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/howToPlayDescription" />
+
+    <TextView
+        android:text="@string/how_to_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/howToPlayTitle"
+        android:textAppearance="@android:style/TextAppearance.Material.Display4"
+        android:textSize="36sp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true" />
+</RelativeLayout>

@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">Connect 4</string>
+    <string name="connect_4_by_cameron_rooks_ziyan_long_robert_cobau">Connect 4 by Cameron Rooks, Ziyan Long, Robert Cobau</string>
+    <string name="connect_4">Connect 4</string>
+    <string name="play">Play!</string>
+    <string name="how_to_play">How To Play</string>
+    <string name="textview">TextView</string>
+    <string name="home">Home</string>
+    <string name="done">Done</string>
+    <string name="quit">Quit</string>
+    <string name="surrender">Surrender</string>
+    <string name="undo">Undo</string>
+    <string name="player1Entry">Player 1:</string>
+    <string name="player2Entry">Player 2:</string>
+    <string name="nameEntry">Enter name here</string>
+    <string name="howToPlayDescription">Connect Four is an absorbing and challenging game of
+        vertical strategy that’s easy to learn and fun to play. Rules are simple.
+        Each player tries to build a row of four playing pieces in the frame -
+        horizontally, vertically, or diagonally - while trying to prevent his opponent from
+        doing the same.
+        \n\nObject of the game: Be the first player to get four of your checkers in a
+        row - horizontally, vertically or diagonally.
+        \n\nRules
+        \n 1. Choose who plays first.
+        \n 2. Each player        in his turn drops one of his checkers down any of the slots in the
+        top of the grid.
+        \n 3. The play alternates until one of the players gets four checkers of his colour in a row.
+        The four in a row can be horizontal, vertical, or diagonal.(See examples).
+        \n 4. The first player to get four in a row wins.
+        \n 5. If the board is filled with pieces and neither player has 4 in a row, then the game is a
+        draw.
+        \n\n —excerpt from http://www.andersbaumann.dk/connectfour/rulesConnectFour.html</string>
+    <string name="game_over">Game Over</string>
+    <string name="play_again">Play Again</string>
+    <string name="exit">Exit</string>
+    <string name="current_player">Current Player:</string>
+    <string name="wins">wins!</string>
+    <string name="username">Username:</string>
+    <string name="enter_username">Enter username...</string>
+    <string name="password">Password:</string>
+    <string name="enter_password">Enter password...</string>
+    <string name="login">Login</string>
+    <string name="create_new_user">Create New User</string>
+    <string name="create_user">Create User</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="remember_me">Remember me?</string>
+    <string name="waiting_for_player">Waiting for player...</string>
+    <string name="Player1">You:</string>
+    <string name="Player2">Opponent:</string>
+    <string name="waiting">waiting</string>
+    <string name="gameStart">START</string>
+</resources>

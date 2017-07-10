@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.msu.rookscam.team9.connect4.NewUserActivity">
+
+    <TextView
+        android:id="@+id/createUserTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/create_new_user"
+        android:textAppearance="@android:style/TextAppearance.Material.Title"
+        tools:layout_editor_absoluteX="129dp"
+        tools:layout_editor_absoluteY="76dp" />
+
+    <TextView
+        android:id="@+id/createUsernameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/createUserTitle"
+        android:layout_centerHorizontal="false"
+        android:layout_toStartOf="@+id/createUserTitle"
+        android:labelFor="@+id/usernameEditText"
+        android:paddingBottom="20dp"
+        android:paddingEnd="20dp"
+        android:paddingStart="20dp"
+        android:paddingTop="20dp"
+        android:text="@string/username" />
+
+    <EditText
+        android:id="@+id/createUsernameEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/createUsernameText"
+        android:layout_alignEnd="@+id/createUserTitle"
+        android:layout_toEndOf="@+id/createUsernameText"
+        android:ems="10"
+        android:gravity="center_vertical|center_horizontal"
+        android:hint="@string/enter_username"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/createPasswordText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/createUsernameText"
+        android:layout_centerHorizontal="true"
+        android:layout_toStartOf="@+id/createUserTitle"
+        android:labelFor="@+id/createPasswordEditText"
+        android:paddingBottom="20dp"
+        android:paddingEnd="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingStart="20dp"
+        android:paddingTop="20dp"
+        android:text="@string/password" />
+
+    <EditText
+        android:id="@+id/createPasswordEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/createPasswordText"
+        android:layout_alignEnd="@+id/createUserTitle"
+        android:layout_toEndOf="@+id/createPasswordText"
+        android:ems="10"
+        android:gravity="center_vertical|center_horizontal"
+        android:hint="@string/enter_password"
+        android:inputType="textPassword" />
+
+    <TextView
+        android:id="@+id/createPasswordConfirmText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/createPasswordText"
+        android:layout_centerHorizontal="true"
+        android:layout_toStartOf="@+id/createUserTitle"
+        android:labelFor="@+id/createPasswordConfirmEditText"
+        android:paddingBottom="20dp"
+        android:paddingEnd="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingStart="20dp"
+        android:paddingTop="20dp"
+        android:text="@string/password" />
+
+    <EditText
+        android:id="@+id/createPasswordConfirmEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/createPasswordConfirmText"
+        android:layout_alignEnd="@+id/createUserTitle"
+        android:layout_toEndOf="@+id/createPasswordConfirmText"
+        android:ems="10"
+        android:gravity="center_vertical|center_horizontal"
+        android:hint="@string/confirm_password"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/createButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/createPasswordEditText"
+        android:layout_alignStart="@+id/createUserTitle"
+        android:layout_below="@+id/createPasswordConfirmText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:onClick="onCreateUser"
+        android:text="@string/create_user" />
+
+</RelativeLayout>
